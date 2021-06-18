@@ -1,0 +1,35 @@
+<div class="carroVacio" *ngIf="productosCarrito.length === 0">
+  Tu carrito está vacío. ¡Empieza a pedir ahora!</div>
+
+<div class="table-container" *ngIf="productosCarrito.length !== 0">
+  <mat-table [dataSource]= "productosCarrito" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Producto </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.producto.nombre}} </mat-cell>
+      <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cantidad}} </mat-cell>
+      <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.producto.precio}} €</mat-cell>
+      <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalPrice">
+      <mat-header-cell *matHeaderCellDef>Precio total</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.producto.precio * element.cantidad}} €</mat-cell>
+      <mat-footer-cell class="precioTotal" *matFooterCellDef>Precio total del pedido: {{getTotal()}} €</mat-footer-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-footer-row *matFooterRowDef="displayedColumns"></mat-footer-row>
+
+  </mat-table>
+</div>

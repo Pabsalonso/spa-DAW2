@@ -1,0 +1,33 @@
+[{
+  "id": "1",
+  "tipo": "hamburguesa",
+  "nombre": "Hamburguesa con queso",
+  "ingredientes": ["Pan blanco","Carne de vacuno", "Queso"],
+  "precio": "13"
+},{
+  "id": "2",
+  "tipo": "hamburguesa",
+  "nombre": "Hamburguesa de queso de cabra",
+  "ingredientes": ["Pan blanco","Carne de vacuno 200g", "Queso de cabra", "Lechuga", "Tomate"],
+  "precio": "16"
+},{
+  "id": "3",
+  "tipo": "hamburguesa",
+  "nombre": "Hamburguesa de pollo",
+  "ingredientes": ["Pan de semillas","Pollo frito", "Salsa barbacoa", "Lechuga", "Tomate"],
+  "precio": "10"
+},{
+  "id": "4",
+  "tipo": "hamburguesa",
+  "nombre": "Hamburguesa Vegana",
+  "ingredientes": ["Pan integral","Carne vegana", "Salsa vegana", "Lechuga", "Tomate", "Cebolla"],
+  "precio": "12"
+},
+{
+  "id": "5",
+  "tipo": "hamburguesa",
+  "nombre": "Hamburguesa Especial",
+  "ingredientes": ["Pan de semillas","Carne vacuno 200g", "Huevo", "Lechuga", "Tomate"],
+  "precio": "17"
+}
+]

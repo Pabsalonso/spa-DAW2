@@ -1,0 +1,34 @@
+<div class="content">
+  <ion-grid>
+    <h1>Nuestra carta</h1>
+    <ion-row>
+      <ion-col>
+          <h2> <mat-icon> fastfood</mat-icon> Hamburguesas</h2>
+      </ion-col>
+    </ion-row>
+    <mat-divider></mat-divider>
+    <ion-row>
+      <ion-col #burgers size ="3" *ngFor="let producto of carta" matBadge={{badgeNum(producto.id)}}>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>{{producto.nombre}}</b>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-list>
+            <div mat-subheader>Ingredientes</div>
+            <mat-list-item *ngFor="let ingredients of producto.ingredientes">
+              {{ingredients}}
+            </mat-list-item>
+          </mat-list>
+          <div class="precio">Precio: {{producto.precio}} €</div>
+          <mat-action-row>
+            <button mat-flat-button mat-button color="warn" (click)="removeProducto(producto)">Quitar</button>
+            <button mat-flat-button mat-button color="primary" (click)="addProducto(producto)">Añadir</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
